@@ -1,25 +1,28 @@
-$red-text: red;
-$blue-text: blue;
-$green-color: green;
+@use "variables.scss" as color;
+@use "functions.scss" as f;
 
-@mixin article-card($color, $border-color, $font-size) {
-  color: $color;
-  border-color: $border-color;
-  font-size: $font-size;
-}
+// $red-text: var-colors.$red;
+// $blue-text: var-colors.$blue;
+// $green-color: var-colors.$green;
+
+// @mixin article-card($color, $border-color, $font-size) {
+//   color: $color;
+//   border-color: $border-color;
+//   font-size: $font-size;
+// }
 
 div {
-  padding: 15px;
+  padding: f.rem(15);
   align-items: center;
-  border: 2px solid red;
+  border: f.rem(2) solid color.$red;
   display: flex;
   flex-direction: column;
 
   & h1 {
-    color: $green-color;
+    color: color.$green;
     text-decoration-line: underline;
-    text-decoration-color: blue;
-    text-decoration-thickness: 2px;
+    text-decoration-color: color.$blue;
+    text-decoration-thickness: f.rem(2);
     text-underline-position: under;
   }
 
@@ -28,28 +31,37 @@ div {
     grid-template-columns: repeat(4, 1fr);
 
     & article {
-      padding: 20px;
+      padding: f.rem(20);
       text-align: center;
-      border: 1px solid;
+      border: f.rem(1) solid;
     }
 
     & article:nth-child(2n) {
-      @include article-card($red-text, $green-color, 1rem);
+      color: color.$red;
+      border-color: color.$green;
+      font-size: f.rem();
+      // @include article-card($red-text, $green-color, f.rem(16));
     }
 
     & article:nth-child(2n-1) {
-      @include article-card($blue-text, $green-color, 1rem);
+      color: color.$blue;
+      border-color: color.$green;
+      font-size: f.rem();
+      // @include article-card($blue-text, $green-color, f.rem(16));
     }
   }
 
   & .article-card-2 {
-    margin-top: 1rem;
+    margin-top: f.rem();
     width: 100%;
     & article {
-      border: 1px solid;
-      padding: 2rem;
+      border: f.rem(1) solid;
+      padding: f.rem(32);
       text-align: center;
-      @include article-card($green-color, $blue-text, 24px);
+      color: color.$green;
+      border-color: color.$blue;
+      font-size: f.rem(24);
+      // @include article-card($green-color, $blue-text, f.rem(24));
     }
   }
 }

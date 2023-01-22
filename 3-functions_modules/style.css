@@ -1,7 +1,7 @@
 div {
-  padding: 15px;
+  padding: 0.9375rem;
   align-items: center;
-  border: 2px solid red;
+  border: 0.125rem solid red;
   display: flex;
   flex-direction: column;
 }
@@ -9,7 +9,7 @@ div h1 {
   color: green;
   text-decoration-line: underline;
   text-decoration-color: blue;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 0.125rem;
   text-underline-position: under;
 }
 div .article-card-1 {
@@ -17,9 +17,9 @@ div .article-card-1 {
   grid-template-columns: repeat(4, 1fr);
 }
 div .article-card-1 article {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-  border: 1px solid;
+  border: 0.0625rem solid;
 }
 div .article-card-1 article:nth-child(2n) {
   color: red;
@@ -36,12 +36,12 @@ div .article-card-2 {
   width: 100%;
 }
 div .article-card-2 article {
-  border: 1px solid;
+  border: 0.0625rem solid;
   padding: 2rem;
   text-align: center;
   color: green;
   border-color: blue;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
