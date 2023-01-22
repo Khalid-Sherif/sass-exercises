@@ -1,0 +1,45 @@
+div {
+  padding: 15px;
+  align-items: center;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+div h1 {
+  color: green;
+  text-decoration-line: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+div .article-card-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+div .article-card-1 article {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid;
+}
+div .article-card-1 article:nth-child(2n) {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+}
+div .article-card-1 article:nth-child(2n-1) {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+}
+div .article-card-2 {
+  margin-top: 1rem;
+}
+div .article-card-2 article {
+  border: 1px solid;
+  padding: 2rem;
+  color: green;
+  border-color: blue;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */

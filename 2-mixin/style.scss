@@ -1,0 +1,54 @@
+$red-text: red;
+$blue-text: blue;
+$green-color: green;
+
+@mixin article-card($color, $border-color, $font-size) {
+  color: $color;
+  border-color: $border-color;
+  font-size: $font-size;
+}
+
+div {
+  padding: 15px;
+  align-items: center;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    color: $green-color;
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+  }
+
+  & .article-card-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & article {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid;
+    }
+
+    & article:nth-child(2n) {
+      @include article-card($red-text, $green-color, 1rem);
+    }
+
+    & article:nth-child(2n-1) {
+      @include article-card($blue-text, $green-color, 1rem);
+    }
+  }
+
+  & .article-card-2 {
+    margin-top: 1rem;
+
+    & article {
+      border: 1px solid;
+      padding: 2rem;
+      @include article-card($green-color, $blue-text, 24px);
+    }
+  }
+}
