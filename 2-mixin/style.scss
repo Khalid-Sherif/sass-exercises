@@ -2,7 +2,7 @@ $red-text: red;
 $blue-text: blue;
 $green-color: green;
 
-@mixin article-card($color, $border-color, $font-size) {
+@mixin article-card($color, $border-color, $font-size: 1rem) {
   color: $color;
   border-color: $border-color;
   font-size: $font-size;
@@ -34,11 +34,11 @@ div {
     }
 
     & article:nth-child(2n) {
-      @include article-card($red-text, $green-color, 1rem);
+      @include article-card($red-text, $green-color);
     }
 
     & article:nth-child(2n-1) {
-      @include article-card($blue-text, $green-color, 1rem);
+      @include article-card($blue-text, $green-color);
     }
   }
 
