@@ -1,0 +1,74 @@
+@use "variables.scss" as color;
+@use "functions.scss" as f;
+
+// $red-text: var-colors.$red;
+// $blue-text: var-colors.$blue;
+// $green-color: var-colors.$green;
+
+// @mixin article-card($color, $border-color, $font-size) {
+//   color: $color;
+//   border-color: $border-color;
+//   font-size: $font-size;
+// }
+
+div {
+  padding: f.rem(15);
+  align-items: center;
+  border: f.rem(2) solid color.$red;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    color: color.$green;
+    text-decoration-line: underline;
+    text-decoration-color: color.$blue;
+    text-decoration-thickness: f.rem(2);
+    text-underline-position: under;
+  }
+
+  & h2 {
+    @extend h1;
+    padding: f.rem();
+    border: f.rem(1) solid color.$red;
+    text-decoration-line: none;
+  }
+
+  & .article-card-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & article {
+      padding: f.rem(20);
+      text-align: center;
+      border: f.rem(1) solid;
+    }
+
+    & article:nth-child(2n) {
+      color: color.$red;
+      border-color: color.$green;
+      font-size: f.rem();
+      // @include article-card($red-text, $green-color, f.rem(16));
+    }
+
+    & article:nth-child(2n-1) {
+      color: color.$blue;
+      border-color: color.$green;
+      font-size: f.rem();
+      // @include article-card($blue-text, $green-color, f.rem(16));
+    }
+  }
+
+  & .article-card-2 {
+    margin-top: f.rem();
+    width: 100%;
+    & article {
+      border: f.rem(1) solid;
+      padding: f.rem(32);
+      text-align: center;
+      color: color.$green;
+      border-color: color.$blue;
+      font-size: f.rem(24);
+      // @include article-card($green-color, $blue-text, f.rem(24));
+    }
+  }
+}
