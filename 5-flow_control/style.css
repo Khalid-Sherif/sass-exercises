@@ -1,0 +1,228 @@
+.fs-1rem {
+  font-size: 0.9375rem;
+}
+
+.fs-2rem {
+  font-size: 1.875rem;
+}
+
+.fs-3rem {
+  font-size: 2.8125rem;
+}
+
+.numbers div:nth-child(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(4) {
+  background-color: #cccccc;
+  color: #333333;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(8) {
+  background-color: #999999;
+  color: #666666;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(10) {
+  background-color: gray;
+  color: gray;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(10) {
+  background-color: blue;
+  color: red;
+}
+
+.numbers div:nth-child(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(12) {
+  background-color: #666666;
+  color: #999999;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(16) {
+  background-color: #333333;
+  color: #cccccc;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.numbers div:nth-child(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+}
+
+.main {
+  padding: 0.9375rem;
+  align-items: center;
+  border: 0.125rem solid red;
+  display: flex;
+  flex-direction: column;
+}
+.main h1, .main h2 {
+  color: green;
+  text-decoration-line: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 0.125rem;
+  text-underline-position: under;
+}
+.main h2 {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  text-decoration-line: none;
+}
+.main .article-card-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.main .article-card-1 article {
+  padding: 1.25rem;
+  text-align: center;
+  border: 0.0625rem solid;
+}
+.main .article-card-1 article:nth-child(2n) {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+}
+.main .article-card-1 article:nth-child(2n-1) {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+}
+.main .numbers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.main .article-card-2 {
+  margin-top: 1rem;
+  width: 100%;
+}
+.main .article-card-2 article {
+  border: 0.0625rem solid;
+  padding: 2rem;
+  text-align: center;
+  color: green;
+  border-color: blue;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

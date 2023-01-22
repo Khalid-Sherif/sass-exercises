@@ -1,0 +1,102 @@
+@use "sass:color";
+@use "variables.scss" as colors;
+@use "functions.scss" as f;
+
+$value: 1;
+$num: 1;
+$light: -5;
+$dark: 5;
+
+@each $font-size in (1, 2, 3) {
+  .fs-#{$font-size}rem {
+    font-size: f.rem($font-size * 15);
+  }
+}
+
+@for $i from 1 through 19 {
+  .numbers div:nth-child(#{$i}) {
+    background-color: color.adjust($color: #fff, $lightness: $light * 1%);
+    color: color.adjust($color: #000, $lightness: $dark * 1%);
+    width: f.rem(45);
+    height: f.rem(45);
+    border: f.rem(1) solid colors.$red;
+  }
+
+  @if $i == 10 {
+    .numbers div:nth-child(10) {
+      background-color: colors.$blue;
+      color: colors.$red;
+    }
+  }
+
+  $value: $value + 1;
+  $light: $light - 5;
+  $dark: $dark + 5;
+}
+
+.main {
+  padding: f.rem(15);
+  align-items: center;
+  border: f.rem(2) solid colors.$red;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    color: colors.$green;
+    text-decoration-line: underline;
+    text-decoration-color: colors.$blue;
+    text-decoration-thickness: f.rem(2);
+    text-underline-position: under;
+  }
+
+  & h2 {
+    @extend h1;
+    padding: f.rem();
+    border: f.rem(1) solid colors.$red;
+    text-decoration-line: none;
+  }
+
+  & .article-card-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & article {
+      padding: f.rem(20);
+      text-align: center;
+      border: f.rem(1) solid;
+    }
+
+    & article:nth-child(2n) {
+      color: colors.$red;
+      border-color: colors.$green;
+      font-size: f.rem();
+    }
+
+    & article:nth-child(2n-1) {
+      color: colors.$blue;
+      border-color: colors.$green;
+      font-size: f.rem();
+    }
+  }
+
+  & .numbers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: f.rem();
+  }
+
+  & .article-card-2 {
+    margin-top: f.rem();
+    width: 100%;
+    & article {
+      border: f.rem(1) solid;
+      padding: f.rem(32);
+      text-align: center;
+      color: colors.$green;
+      border-color: colors.$blue;
+      font-size: f.rem(24);
+    }
+  }
+}
