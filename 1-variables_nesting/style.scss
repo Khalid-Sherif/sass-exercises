@@ -1,0 +1,42 @@
+$red-text: red;
+$blue-text: blue;
+$green-color: green;
+
+div {
+  padding: 15px;
+  align-items: center;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    color: $green-color;
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+  }
+
+  & section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & article {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid $green-color;
+    }
+
+    & article:nth-child(2n) {
+      & p {
+        color: $red-text;
+      }
+    }
+
+    & article:nth-child(2n-1) {
+      & p {
+        color: $blue-text;
+      }
+    }
+  }
+}
