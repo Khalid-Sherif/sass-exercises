@@ -176,15 +176,18 @@
 }
 .main h1, .main h2 {
   color: green;
-  text-decoration-line: underline;
-  text-decoration-color: blue;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
   text-decoration-thickness: 0.125rem;
   text-underline-position: under;
 }
 .main h2 {
   padding: 1rem;
   border: 0.0625rem solid red;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 .main .article-card-1 {
   display: grid;
@@ -207,7 +210,6 @@
 }
 .main .numbers {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
   margin-top: 1rem;
@@ -223,6 +225,4 @@
   color: green;
   border-color: blue;
   font-size: 1.5rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
